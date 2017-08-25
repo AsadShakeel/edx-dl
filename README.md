@@ -20,13 +20,13 @@ has better security than Python 2.
 
 To install edx-dl run:
 
-    pip install edx-dl
+    python -m pip install edx-dl
 
 # Manual Installation
 
 To install all the dependencies please do:
 
-    pip install -r requirements.txt
+    python -m pip install -r requirements.txt
 
 ## youtube-dl
 
@@ -39,19 +39,19 @@ Youtube changes their layout from time to time, it may be necessary to
 upgrade your copy of `youtube-dl`.  There are many ways to proceed here, but
 the simplest is to simply use:
 
-    pip install --upgrade youtube-dl
+    python -m pip install --upgrade youtube-dl
 
 # Quick Start
 
 Once you have installed everything, to use `edx-dl.py`, let it discover the
 courses in which you are enrolled, by issuing:
 
-    edx-dl -u user@user.com --list-courses
+    python -m edx-dl -u user@user.com --list-courses
 
 From there, choose the course you are interested in, copy its URL and use it
 in the following command:
 
-    edx-dl -u user@user.com COURSE_URL
+    python -m edx-dl -u user@user.com COURSE_URL
 
 replacing `COURSE_URL` with the URL that you just copied in the first step.
 It should look something like:
@@ -64,7 +64,7 @@ destination with the `-o` argument.
 To see all available options and a brief description of what they do, simply
 execute:
 
-    edx-dl --help
+    python -m edx-dl --help
 
 *Important Note:* To use sites other than edx.org, you have to specify the
 site along with the `-x` option. For example, `-x stanford`, if the course
@@ -87,7 +87,7 @@ Before reporting any issue please follow the steps below:
 1. Verify that you are running the latest version of all the programs (both
 of `edx-dl` and of `youtube-dl`).  Use the following command if in doubt:
 
-        pip install --upgrade edx-dl
+        python -m pip install --upgrade edx-dl
 
 2. If the problem persists, feel free to [open an issue][issue] in our
 bugtracker, please fill the issue template with *as much information as
